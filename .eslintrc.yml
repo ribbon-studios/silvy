@@ -1,0 +1,148 @@
+---
+env:
+  browser: true
+  es6: true
+  node: true
+extends:
+- prettier
+- plugin:@next/next/recommended
+parser: "@typescript-eslint/parser"
+parserOptions:
+  sourceType: module
+plugins:
+- eslint-plugin-react
+- "@typescript-eslint"
+root: true
+rules:
+  "@typescript-eslint/explicit-member-accessibility":
+  - 'off'
+  - accessibility: explicit
+  "@typescript-eslint/indent":
+  - error
+  - 4
+  - FunctionDeclaration:
+      parameters: first
+    FunctionExpression:
+      parameters: first
+  "@typescript-eslint/member-delimiter-style":
+  - 'off'
+  - multiline:
+      delimiter: none
+      requireLast: true
+    singleline:
+      delimiter: semi
+      requireLast: false
+  "@typescript-eslint/naming-convention":
+  - error
+  - selector: variable
+    format:
+    - camelCase
+    - UPPER_CASE
+    leadingUnderscore: forbid
+    trailingUnderscore: forbid
+  "@typescript-eslint/no-empty-function": 'off'
+  "@typescript-eslint/no-explicit-any": 'off'
+  "@typescript-eslint/no-inferrable-types": 'off'
+  "@typescript-eslint/no-require-imports": 'off'
+  "@typescript-eslint/no-shadow":
+  - error
+  - hoist: all
+  "@typescript-eslint/no-unused-expressions": error
+  "@typescript-eslint/no-var-requires": 'off'
+  "@typescript-eslint/prefer-namespace-keyword": 'off'
+  "@typescript-eslint/quotes":
+  - error
+  - single
+  "@typescript-eslint/semi":
+  - 'off'
+  - never
+  "@typescript-eslint/type-annotation-spacing": error
+  arrow-parens:
+  - 'off'
+  - always
+  brace-style:
+  - error
+  - 1tbs
+  comma-dangle: error
+  curly: 'off'
+  default-case: error
+  eol-last: 'off'
+  eqeqeq:
+  - error
+  - smart
+  guard-for-in: error
+  id-denylist: 'off'
+  id-match: 'off'
+  indent: 'off'
+  linebreak-style: 'off'
+  max-len:
+  - 'off'
+  - code: 140
+  new-parens: 'off'
+  newline-per-chained-call: 'off'
+  no-bitwise: error
+  no-caller: error
+  no-cond-assign: error
+  no-console:
+  - error
+  - allow:
+    - log
+    - warn
+    - dir
+    - timeLog
+    - assert
+    - clear
+    - count
+    - countReset
+    - group
+    - groupEnd
+    - table
+    - dirxml
+    - error
+    - groupCollapsed
+    - Console
+    - profile
+    - profileEnd
+    - timeStamp
+    - context
+  no-debugger: error
+  no-empty: 'off'
+  no-empty-function: 'off'
+  no-eval: error
+  no-extra-semi: 'off'
+  no-fallthrough: 'off'
+  no-irregular-whitespace: 'off'
+  no-multiple-empty-lines: 'off'
+  no-new-wrappers: error
+  no-redeclare: error
+  no-shadow: 'off'
+  no-trailing-spaces: error
+  no-underscore-dangle: 'off'
+  no-unused-expressions: 'off'
+  no-unused-labels: error
+  no-var: error
+  padded-blocks:
+  - 'off'
+  - blocks: never
+  - allowSingleLineBlocks: true
+  quote-props: 'off'
+  quotes: 'off'
+  radix: 'off'
+  react/jsx-curly-spacing: 'off'
+  react/jsx-equals-spacing: 'off'
+  react/jsx-tag-spacing:
+  - 'off'
+  - afterOpening: allow
+    closingSlash: allow
+  react/jsx-wrap-multilines: 'off'
+  semi: 'off'
+  space-before-function-paren: 'off'
+  space-in-parens:
+  - 'off'
+  - never
+  spaced-comment:
+  - error
+  - always
+  - markers:
+    - "/"
+
