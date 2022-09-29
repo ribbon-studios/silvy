@@ -15,6 +15,7 @@
     "@emotion/react": "^11.10.4",
     "@reduxjs/toolkit": "^1.8.5",
     "next": "^12.3.1",
+    "next-auth": "^4.12.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-polymorphic-types": "^2.0.0",

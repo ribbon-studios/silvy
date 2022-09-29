@@ -1,13 +1,15 @@
+
 import styles from './Header.module.scss';
 import { Button } from './Button';
-import { Animations, Direction, Sizes } from '../constants/components';
+import { Direction, Sizes } from '../constants/components';
 import { Content } from './Content';
 import Link from 'next/link';
+import Login from './Login';
 
 export function Header() {
     return (
         <div className={styles.header}>
-            <Content className={styles.content} direction={Direction.HORIZONTAL}>
+            <Content className={styles.content} direction={Direction.HORIZONTAL} main>
                 <Button
                     as={Link}
                     className={styles.name}
@@ -27,13 +29,7 @@ export function Header() {
                 <div style={{
                     flex: 1
                 }}></div>
-                <Button
-                    animation={Animations.SWAP}
-                    className={styles.discord}
-                    size={Sizes.MEDIUM}
-                >
-                    Login
-                </Button>
+                <Login />
             </Content>
         </div>
     );

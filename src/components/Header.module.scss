@@ -5,6 +5,7 @@
     height: 70px;
     box-sizing: border-box;
     background: #161b21;
+    position: relative;
 }
 
 .content {
@@ -14,8 +15,4 @@
 
 .name {
     font-family: 'Dancing Script', cursive;
-}
-
-.discord {
-    font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 }
