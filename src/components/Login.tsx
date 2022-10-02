@@ -2,7 +2,7 @@ import { useSession, signIn, signOut } from 'next-auth/react';
 import styles from './Login.module.scss';
 import { Animations, Sizes } from '../constants/components';
 import { Button } from './Button';
-import Avatar from './Avatar';
+import { Avatar } from './Avatar';
 
 export default function Login() {
     const { data: session } = useSession();

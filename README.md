@@ -1,23 +1,65 @@
-# Silvy
+_**⚠️ This repo is still a WIP and things are always subject to change. ⚠️**_
 
-An app for creating, sharing, and collaborating on strats for XIV
+[![Docker Hub Version](https://img.shields.io/docker/v/rainbowcafe/silvy?label=Docker%20Hub%20Version)](https://hub.docker.com/repository/docker/rainbowcafe/silvy)
 
-## Getting Started
+[![Coveralls](https://img.shields.io/coveralls/github/rain-cafe-xiv/silvy)](https://coveralls.io/github/rain-cafe-xiv/silvy)
 
-### Vercel
+## Silvy
+
+An app for creating, sharing, and collaborating on strats for XIV.
+
+### Supports
+
+- 💻 Self-hosting!
+- 💿 [Almost any database you'd ever want!](#supported-databases)
+- ✏️ Creating Strats
+- 🎉 Creating Teams
+
+### Supported Databases
+
+- 🐘 Postgres
+- 🦭 MariaDB (MySQL)
+- Ⓜ️ SQL Server
+- 🪶 SQLite
+
+
+### Getting Started
+
+#### Docker
 
 ```sh
-$ npm i -g vercel
-$ vercel env pull .env.local
+$ docker run -d \
+      --restart=always \
+      -e NEXTAUTH_URL="<your-next-auth-url>" \
+      -e NEXTAUTH_SECRET="<your-next-auth-secret>" \
+      -e DISCORD_CLIENT_ID="<your-discord-client-id>" \
+      -e DISCORD_SECRET="<your-discord-token>" \
+      -e DATABASE_URL="<your-database-url>" \
+      --name discord-bot \
+      rainbowcafe/silvy
 ```
 
-### Install
+#### Docker Compose
 
-- Run `npm ci` in your terminal in the root of this project
+```yml
+version: "3"
 
-### Running the app
+services:
+  discord-bot:
+    image: rainbowcafe/silvy:latest
+    container_name: discord-bot
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    environment:
+      NEXTAUTH_URL: "<your-next-auth-url>"
+      NEXTAUTH_SECRET: "<your-next-auth-secret>"
+      DISCORD_CLIENT_ID: "<your-discord-client-id>"
+      DISCORD_SECRET: "<your-discord-token>"
+      DATABASE_URL: "<your-database-url>"
+```
 
-- Run `npm run dev` in your terminal to start a development server/watcher. It will live reload on changes. Visit http://localhost:3000 (verify location in terminal)
+[_**Want to Contribute?**_](/CONTRIBUTING.md)
 
 [![Vercel][vercel-image]][vercel-url]
 
