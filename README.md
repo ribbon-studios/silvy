@@ -18,14 +18,13 @@ An app for creating, sharing, and collaborating on strats for XIV.
 ### Supported Databases
 
 - 🐘 Postgres
-- 🦭 MariaDB (MySQL)
+- 🐬 MariaDB (MySQL)
 - Ⓜ️ SQL Server
-- 🪶 SQLite
-
+- 🐤 SQLite
 
 ### Getting Started
 
-#### Docker
+#### 🐳 Docker
 
 ```sh
 $ docker run -d \
@@ -39,7 +38,7 @@ $ docker run -d \
       rainbowcafe/silvy
 ```
 
-#### Docker Compose
+#### 🐋 Docker Compose
 
 ```yml
 version: "3"
