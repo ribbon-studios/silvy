@@ -1,3 +1,5 @@
+import { pathsToModuleNameMapper } from 'ts-jest';
+import { compilerOptions } from './tsconfig.json';
 import type { JestConfigWithTsJest } from 'ts-jest';
 
 const jestConfig: JestConfigWithTsJest = {
@@ -23,7 +25,8 @@ const jestConfig: JestConfigWithTsJest = {
     ],
 
     moduleNameMapper: {
-        '\\.(css|less|scss|sss|styl)$': '<rootDir>/node_modules/jest-css-modules'
+        '\\.(scss)$': 'identity-obj-proxy',
+        ...pathsToModuleNameMapper(compilerOptions.paths , { prefix: '<rootDir>/' })
     }
 };
 

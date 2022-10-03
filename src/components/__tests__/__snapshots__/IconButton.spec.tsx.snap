@@ -48,7 +48,7 @@ exports[`Component(Button) should support NextJS Links 1`] = `
   <div>
     <a
       class="button sz-small an-none iconButton"
-      href="https://google.com"
+      href="https://silvy.rains.cafe"
     >
       <svg
         class="icon"
