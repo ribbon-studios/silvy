@@ -5,6 +5,7 @@ export enum Sizes {
 }
 
 export enum Animations {
+    NONE = 'none',
     DARKEN = 'darken',
     SWAP = 'swap',
 }
