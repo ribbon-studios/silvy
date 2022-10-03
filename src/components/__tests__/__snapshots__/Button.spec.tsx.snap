@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component(Button) should display the Button 1`] = `
+<body>
+  <div>
+    <button
+      class="button sz-small an-darken"
+    >
+      children
+    </button>
+  </div>
+</body>
+`;
+
+exports[`Component(Button) should support NextJS Links 1`] = `
+<body>
+  <div>
+    <a
+      class="button sz-small an-darken"
+      href="https://google.com"
+    >
+      children
+    </a>
+  </div>
+</body>
+`;
+
+exports[`Component(Button) should support being disabled 1`] = `
+<body>
+  <div>
+    <button
+      class="button sz-small an-darken disabled"
+    >
+      children
+    </button>
+  </div>
+</body>
+`;
+
+exports[`Component(Button) should support changing the animation 1`] = `
+<body>
+  <div>
+    <button
+      class="button sz-small an-none"
+    >
+      children
+    </button>
+  </div>
+</body>
+`;
+
+exports[`Component(Button) should support changing the size 1`] = `
+<body>
+  <div>
+    <button
+      class="button sz-medium an-darken"
+    >
+      children
+    </button>
+  </div>
+</body>
+`;
+
+exports[`Component(Button) should support overriding the tag type 1`] = `
+<body>
+  <div>
+    <a
+      class="button sz-small an-darken"
+    >
+      children
+    </a>
+  </div>
+</body>
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component(Pride) should display the Pride 1`] = `
+<body>
+  <div>
+    <div
+      class="pride"
+    />
+  </div>
+</body>
+`;
