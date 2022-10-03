@@ -6,9 +6,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    font-size: inherit;
+    border: transparent;
+    background-color: transparent;
 
     color: var(--popover-item-color);
-    background-color: var(--popover-background-color);
 
     transition: 0.15s ease-in-out;
     transition-property: background-color, color;
