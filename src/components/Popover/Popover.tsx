@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRef } from 'react';
 import { Alignment, Actions } from '../../constants/components';
 import { classnames } from '../../utils/classnames';
 import { useOpened } from '../../utils/element';
@@ -19,7 +20,13 @@ export function Popover({
     alignment = Alignment.CENTER,
     action = Actions.HOVER
 }: PopoverProps) {
-    const [opened, eventProps] = useOpened(externallyOpened, action, true);
+    const ref = useRef<HTMLDivElement>();
+    const [opened, eventProps] = useOpened({
+        opened: externallyOpened,
+        action,
+        autoClose: true,
+        ref
+    });
 
     return (
         <div
