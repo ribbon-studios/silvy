@@ -1,5 +1,5 @@
-import { Direction } from '../constants/components';
-import { classnames } from '../utils/classnames';
+import classnames from 'classnames';
+import { Direction } from '../../constants/components';
 import styles from './Content.module.scss';
 
 interface ContentProps {

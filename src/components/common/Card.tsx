@@ -1,5 +1,5 @@
-import { Direction } from '../constants/components';
-import { classnames } from '../utils/classnames';
+import classnames from 'classnames';
+import { Direction } from '../../constants/components';
 import { Content } from './Content';
 import styles from './Card.module.scss';
 

@@ -1,7 +1,7 @@
 import styles from './Footer.module.scss';
 import Image from 'next/image';
-import { Content } from './Content';
-import { Direction } from '../constants/components';
+import { Content } from '../common/Content';
+import { Direction } from '../../constants/components';
 
 export function Footer() {
     return (

@@ -41,8 +41,7 @@ export function useOpened<E extends HTMLElement>(options: Options<E>): [boolean,
         }
     }, []);
 
-    let eventProps: EventProps = {};
-
+    const eventProps: EventProps = {};
     if (isMobile || options.action === Actions.CLICK) {
         eventProps.onClick = open;
     } else if (options.action === Actions.HOVER) {

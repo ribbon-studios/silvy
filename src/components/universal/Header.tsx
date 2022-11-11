@@ -1,13 +1,13 @@
 
 import { BsPatchPlus, BsPatchPlusFill, BsPeopleFill, BsBookFill } from 'react-icons/bs';
 import styles from './Header.module.scss';
-import { Button } from './Button';
-import { Alignment, Direction, Sizes } from '../constants/components';
-import { Content } from './Content';
+import { Button } from '../common/Button';
+import { Direction, Sizes } from '../../constants/components';
+import { Content } from '../common/Content';
 import Link from 'next/link';
 import Login from './Login';
-import { IconButton } from './IconButton';
-import { Popover, PopoverItem } from './Popover';
+import { IconButton } from '../common/IconButton';
+import { Popover, PopoverItem } from '../common/Popover';
 import { useSession } from 'next-auth/react';
 
 export function Header() {

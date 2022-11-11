@@ -1,10 +1,10 @@
 import { createRenderComponent } from '@rain/test-utils/render';
 import { screen } from '@testing-library/react';
-import { useOpened } from '../../../utils/element';
+import { useOpened } from '../../../../utils/element';
 import { Popover, PopoverProps } from '../Popover';
 import styles from '../Popover.module.scss';
 
-jest.mock('../../../utils/element');
+jest.mock('../../../../utils/element');
 
 const mockedUseOpened = jest.mocked(useOpened);
 
