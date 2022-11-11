@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
-import { Actions } from '../constants/components';
-import { isMobile } from './mobile';
+import { Actions } from '../../constants/components';
+import { isMobile } from '../../utils/mobile';
 
 export function isInPath(event: Event, element: HTMLElement) {
-    return element && event.composedPath().includes(element);
+    return event.type === 'click' && element && event.composedPath().includes(element);
 }
 
 export function isNotInPath(event: Event, element: HTMLElement) {
@@ -34,11 +34,14 @@ export function useOpened<E extends HTMLElement>(options: Options<E>): [boolean,
         };
     }, [options.opened, options.autoClose]);
 
-    const open = useCallback(() => setOpened(true), []);
+    const open = useCallback(() => {
+        setOpened(true);
+    }, []);
+
     const close = useCallback((event) => {
-        if (isNotInPath(event, options.ref.current)) {
-            setOpened(false);
-        }
+        if (isInPath(event, options.ref.current)) return;
+
+        setOpened(false);
     }, []);
 
     const eventProps: EventProps = {};
