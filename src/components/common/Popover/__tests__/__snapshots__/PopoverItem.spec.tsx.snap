@@ -5,7 +5,11 @@ exports[`Component(PopoverItem) should display the PopoverItem 1`] = `
   <div>
     <button
       class="popoverItem"
-    />
+    >
+      <div
+        class="content"
+      />
+    </button>
   </div>
 </body>
 `;
@@ -16,7 +20,11 @@ exports[`Component(PopoverItem) should support overriding the type 1`] = `
     <a
       class="popoverItem"
       href="https://silvy.rains.cafe"
-    />
+    >
+      <div
+        class="content"
+      />
+    </a>
   </div>
 </body>
 `;
