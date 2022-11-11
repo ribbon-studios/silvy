@@ -11,8 +11,7 @@
     "build": "next build",
     "lint": "eslint src/**/*.tsx",
     "test": "jest --coverage=false",
-    "test:coverage": "jest --coverage",
-    "pull": "vercel env pull .env.local -y"
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -49,7 +48,6 @@
     "jest-environment-jsdom": "^29.3.1",
     "sass": "^1.56.1",
     "ts-jest": "^29.0.3",
-    "typescript": "^4.1.2",
-    "vercel": "^28.4.17"
+    "typescript": "^4.1.2"
   }
 }

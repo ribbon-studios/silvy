@@ -4,14 +4,10 @@ import Layout from '../components/universal/Layout';
 import { COLORS } from '../constants/themes';
 
 export default function SilvyApp({ Component, pageProps: { session, ...pageProps } }) {
-    const router = useRouter();
-
     return (
         <SessionProvider session={session}>
             <Layout>
-                {router.isReady && (
-                    <Component {...pageProps} />
-                )}
+                <Component {...pageProps} />
 
                 <style jsx global>{`
                     @font-face {
