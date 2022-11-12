@@ -11,6 +11,7 @@ export function Avatar({
     return (
         <div className={styles.avatar}>
             <Image
+                alt='Avatar'
                 layout='fill'
                 src={src}
             />
