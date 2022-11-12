@@ -44,16 +44,12 @@ export function ButtonBase<E extends React.ElementType = typeof DEFAULT_ELEMENT>
         return (
             <Element
                 {...extraProps}
+                data-testid='button-base'
                 className={className}
                 disabled={disabled}
                 draggable={false}
             >
-                <a
-                    data-testid='button-base'
-                    className={className}
-                >
-                    {children}
-                </a>
+                {children}
             </Element>
         );
     }

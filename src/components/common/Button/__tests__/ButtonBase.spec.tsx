@@ -33,13 +33,13 @@ describe('Component(Button)', () => {
     });
 
     it('should support NextJS Links', () => {
-        const { baseElement, getByTestId } = renderButton<ButtonBaseProps<typeof Link>>({
+        const { baseElement, getByText } = renderButton<ButtonBaseProps<typeof Link>>({
             as: Link,
             href: 'https://silvy.rains.cafe'
         });
 
         expect(baseElement.querySelector('a')).toBeTruthy();
-        expect(getByTestId('button-base')).toHaveAttribute('href');
+        expect(getByText('UwU')).toHaveAttribute('href');
     });
 
     it('should support being enabled', async () => {
