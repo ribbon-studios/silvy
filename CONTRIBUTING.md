@@ -14,7 +14,7 @@ Then this is the perfect place for you!
 ```properties
 # .env.local
 NEXTAUTH_SECRET="local-secret"
-NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_URL="http://localhost:8000"
 DISCORD_CLIENT_ID="<discord-client-id>"
 DISCORD_CLIENT_SECRET="<discord-client-secret>"
 ```
@@ -27,7 +27,7 @@ $ npm ci
 
 ## Start the Server~
 
-The app should startup at http://localhost:3000!
+The app should startup at http://localhost:8000!
 
 ```sh
 $ npm start
