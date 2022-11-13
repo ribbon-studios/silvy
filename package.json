@@ -6,11 +6,11 @@
   "author": "Ceci <admin@cecilias.me>",
   "license": "GPL-3.0",
   "scripts": {
-    "serve": "BROWSER=none netlify dev -p 8000",
     "start": "next dev",
     "start:prod": "next start",
     "build": "next build",
     "lint": "eslint src/**/*.tsx",
+    "pull": "netlify env:list --json > .env.json",
     "test": "jest --coverage=false",
     "test:coverage": "jest --coverage",
     "deploy:database": "prisma migrate deploy"
@@ -21,6 +21,7 @@
     "@prisma/client": "^4.4.0",
     "@reduxjs/toolkit": "^1.9.0",
     "classnames": "^2.3.2",
+    "dotenv-json": "^1.0.0",
     "mobile-detect": "^1.4.5",
     "next": "^13.0.3",
     "next-auth": "^4.16.4",
@@ -45,6 +46,7 @@
     "@typescript-eslint/eslint-plugin": "^5.42.1",
     "@typescript-eslint/parser": "^5.42.1",
     "chance": "^1.1.9",
+    "convert-json-env": "^1.1.2",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.31.10",

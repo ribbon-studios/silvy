@@ -23,6 +23,7 @@ export function Footer() {
                     height={30}
                     width={110}
                     alt="Netlify"
+                    priority
                 />
             </Button>
             <div className={styles.externalLinks}>
