@@ -12,7 +12,8 @@
     "build": "next build",
     "lint": "eslint src/**/*.tsx",
     "test": "jest --coverage=false",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "deploy:database": "prisma migrate deploy"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
