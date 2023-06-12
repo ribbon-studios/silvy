@@ -28,7 +28,7 @@ jobs:
           cache: 'npm'
       - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
         name: Install Packages
-        run: npm ci
+        run: npm ci --ignore-scripts
 
   lint:
     name: Lint
