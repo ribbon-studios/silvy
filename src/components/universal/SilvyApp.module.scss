@@ -1,0 +1,29 @@
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.15s ease-in-out opacity;
+    opacity: 1;
+    background: var(--silvy-secondary-color);
+
+    .name {
+        font-family: 'Dancing Script', cursive;
+        font-size: 60px;
+    }
+
+    .tagline {
+
+    }
+
+    &.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+}

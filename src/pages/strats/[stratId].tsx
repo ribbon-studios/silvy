@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import StratPage from '../../components/strats/StratPage';
+import { StratPage } from '../../components/strats/StratPage';
 
 export default function Strats() {
     const router = useRouter();

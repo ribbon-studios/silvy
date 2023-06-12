@@ -1,25 +1,27 @@
-import classnames from 'classnames';
 import { Direction } from '../../constants/components';
 import { Content } from './Content';
-import styles from './Card.module.scss';
+import styles from './CardBody.module.scss';
+import classNames from 'classnames';
 
-interface CardProps {
+interface CardBodyProps {
     children: React.ReactNode;
     className?: string;
+    direction?: Direction;
 }
 
-export function Card({
+export function CardBody({
     children,
     className,
+    direction = Direction.VERTICAL,
     ...extraProps
-}: CardProps) {
+}: CardBodyProps) {
     return (
         <Content
-            className={classnames(
-                styles.card,
+            className={classNames(
+                styles.body,
                 className
             )}
-            direction={Direction.VERTICAL}
+            direction={direction}
             {...extraProps}
         >
             {children}

@@ -1,13 +1,23 @@
 import { SessionProvider } from 'next-auth/react';
-import { useRouter } from 'next/router';
-import Layout from '../components/universal/Layout';
+import { AppProps } from 'next/app';
 import { COLORS } from '../constants/themes';
+import { store } from '../store';
+import { Provider } from 'react-redux';
+import { SilvyApp } from '../components/universal/SilvyApp';
 
-export default function SilvyApp({ Component, pageProps: { session, ...pageProps } }) {
+export function App({
+    Component,
+    pageProps: {
+        session,
+        ...pageProps
+    }
+}: AppProps) {
     return (
-        <SessionProvider session={session}>
-            <Layout>
-                <Component {...pageProps} />
+        <Provider store={store}>
+            <SessionProvider session={session}>
+                <SilvyApp>
+                    <Component {...pageProps} />
+                </SilvyApp>
 
                 <style jsx global>{`
                     @font-face {
@@ -33,9 +43,10 @@ export default function SilvyApp({ Component, pageProps: { session, ...pageProps
                     body {
                         padding: 0;
                         margin: 0;
-                        font-family: 'Open Sans', sans-serif;
+                        font-family: 'Source Sans Pro', sans-serif;
                         background: #2f3640;
                         color: #f492a5;
+                        font-size: 16px;
                     }
 
                     * {
@@ -46,8 +57,11 @@ export default function SilvyApp({ Component, pageProps: { session, ...pageProps
                         color: inherit;
                         text-decoration: none;
                     }
-                `}</style>
-            </Layout>
-        </SessionProvider>
+                `}
+                </style>
+            </SessionProvider>
+        </Provider>
     );
 }
+
+export default App;

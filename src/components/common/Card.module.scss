@@ -2,9 +2,10 @@
     --card-background-color: var(--silvy-tertiary-color);
     --card-color: var(--silvy-secondary-color);
 
+    position: relative;
     background: var(--card-background-color);
     color: var(--card-color);
 
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
 }
