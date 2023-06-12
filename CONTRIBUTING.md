@@ -9,7 +9,6 @@ Then this is the perfect place for you!
 
 ## Setting Up Locally
 
-<!-- - Create a `.env.local` file or use `npm run pull` if you're part of our team. -->
 - Create a `.env.local` file or use `npm run pull` if you're part of our team.
 
 ```properties

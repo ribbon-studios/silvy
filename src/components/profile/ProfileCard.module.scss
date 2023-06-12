@@ -1,0 +1,23 @@
+.header {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 10px;
+}
+
+.details {
+    justify-content: center;
+}
+
+.edit {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.card {
+    min-width: 400px;
+}
+
+.name {
+    margin-top: 20px;
+}
