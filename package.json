@@ -49,7 +49,7 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1",
+    "@typescript-eslint/parser": "^5.61.0",
     "chance": "^1.1.9",
     "convert-json-env": "^1.1.2",
     "eslint": "^8.27.0",
