@@ -35,7 +35,7 @@
     "react-icons": "^4.6.0",
     "react-polymorphic-types": "^2.0.0",
     "react-redux": "^8.0.5",
-    "swr": "^2.1.5",
+    "swr": "^2.2.1",
     "wretch": "^2.1.5"
   },
   "devDependencies": {
