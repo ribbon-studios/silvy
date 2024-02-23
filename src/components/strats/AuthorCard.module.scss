@@ -1,0 +1,14 @@
+.card {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    min-width: 300px;
+    align-items: center;
+}
+
+.name {
+    display: flex;
+    height: 100%;
+    padding: 5px 0;
+    flex-direction: column;
+    justify-content: space-between;
+}

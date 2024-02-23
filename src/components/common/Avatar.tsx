@@ -9,11 +9,11 @@ export function Avatar({
     src
 }: AvatarProps): JSX.Element {
     return (
-        <Image
-            className={styles.avatar}
-            width={40}
-            height={40}
-            src={src}
-        />
+        <div className={styles.avatar}>
+            <Image
+                layout='fill'
+                src={src}
+            />
+        </div>
     )
 }
