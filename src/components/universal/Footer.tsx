@@ -12,6 +12,7 @@ export function Footer() {
             <div/>
             <Button
                 as='a'
+                className={styles.poweredBy}
                 href="https://www.netlify.com"
                 target="_blank"
                 rel="noopener noreferrer"
