@@ -1,4 +1,12 @@
 // @ts-check
+import fs from 'fs';
+import dotenvJSON from 'dotenv-json';
+const dotenvFile = '.env.json';
+if (fs.existsSync(dotenvFile)) {
+    dotenvJSON({
+        path: dotenvFile
+    });
+}
 
 /**
  * @type {import('next').NextConfig}
