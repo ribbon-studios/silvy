@@ -4,6 +4,13 @@ An app for creating, sharing, and collaborating on strats for XIV
 
 ## Getting Started
 
+### Vercel
+
+```sh
+$ npm i -g vercel
+$ vercel env pull .env.local
+```
+
 ### Install
 
 - Run `npm ci` in your terminal in the root of this project
