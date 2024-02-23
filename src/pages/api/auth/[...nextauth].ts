@@ -12,8 +12,8 @@ export const authOptions: NextAuthOptions = {
         //   // maxAge: 24 * 60 * 60, // How long email links are valid for (default 24h)
         // }),
         DiscordProvider({
-            clientId: process.env.DISCORD_ID,
-            clientSecret: process.env.DISCORD_SECRET
+            clientId: process.env.DISCORD_CLIENT_ID,
+            clientSecret: process.env.DISCORD_CLIENT_SECRET
         })
     ]
 }

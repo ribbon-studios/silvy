@@ -1,13 +1,13 @@
 import styles from './Avatar.module.scss';
 import Image from 'next/image';
 
-type AvatarProps = {
+export type AvatarProps = {
     src: string;
 }
 
-export default function Avatar({
+export function Avatar({
     src
-}: AvatarProps) {
+}: AvatarProps): JSX.Element {
     return (
         <Image
             className={styles.avatar}
