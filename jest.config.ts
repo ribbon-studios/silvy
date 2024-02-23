@@ -10,6 +10,14 @@ const jestConfig: JestConfigWithTsJest = {
         }]
     },
 
+    collectCoverageFrom: [
+        '<rootDir>/src/**/*'
+    ],
+
+    coveragePathIgnorePatterns: [
+        '__tests__'
+    ],
+
     setupFilesAfterEnv: [
         '@testing-library/jest-dom/extend-expect'
     ],
