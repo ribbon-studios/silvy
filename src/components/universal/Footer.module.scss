@@ -1,25 +1,15 @@
 .footer {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
     height: 60px;
-    padding-bottom: 20px;
+    padding: 0 20px 20px;
 
-    img {
-        margin-left: 0.5rem;
+    > * {
+        color: white;
     }
-    
-    a {
+
+    .externalLinks {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-end;
     }
-}
-
-.poweredBy {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: white;
-}
-
-.logo {
-    height: 1em;
 }

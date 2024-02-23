@@ -1,12 +1,12 @@
 
 import { BsPatchPlus, BsPatchPlusFill, BsPeopleFill, BsBookFill } from 'react-icons/bs';
 import styles from './Header.module.scss';
-import { Button } from '../common/Button';
+import { Button } from '../common/Button/Button';
 import { Direction, Sizes } from '../../constants/components';
 import { Content } from '../common/Content';
 import Link from 'next/link';
 import Login from './Login';
-import { IconButton } from '../common/IconButton';
+import { IconButton } from '../common/Button/IconButton';
 import { Popover, PopoverItem } from '../common/Popover';
 import { useSession } from 'next-auth/react';
 
@@ -32,15 +32,12 @@ export function Header() {
                         toggle={<IconButton
                             icon={BsPatchPlus}
                             hoverIcon={BsPatchPlusFill}
-                            size={30}
                         />}
                     >
-                        <PopoverItem>
-                            <BsBookFill size={20} />
+                        <PopoverItem icon={BsBookFill}>
                             Create a Strat
                         </PopoverItem>
-                        <PopoverItem>
-                            <BsPeopleFill size={20} />
+                        <PopoverItem icon={BsPeopleFill}>
                             Create a Team
                         </PopoverItem>
                     </Popover>

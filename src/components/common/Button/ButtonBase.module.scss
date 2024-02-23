@@ -1,4 +1,4 @@
-.button {
+.buttonBase {
     display: inline-flex;
     gap: 10px;
     align-items: center;
@@ -6,14 +6,10 @@
     border: none;
     cursor: pointer;
     color: inherit;
+    min-height: 50px;
+    user-select: none;
 
     background: transparent;
-    transition: 0.15s ease-in-out;
-    transition-property: background-color, color;
-
-    &:active {
-        color: inherit;
-    }
 
     &.sz-small {
         padding: 10px;
@@ -33,15 +29,11 @@
         font-weight: bold;
     }
 
-    &:hover {
-        &.an-darken {
-            background-color: rgba(0, 0, 0, 0.25);
-        }
+    &:active {
+        color: inherit;
+    }
 
-        &.an-swap {
-            // Figure out if there's a way of clipping the text to be transparent
-            background-color: #f492a5;
-            color: #161b21;
-        }
+    &.disabled {
+        pointer-events: none;
     }
 }

@@ -12,7 +12,7 @@
         opacity: 0;
     }
 
-    &:hover {
+    &.hasHoverIcon:hover {
         .icon {
             opacity: 0;
         }

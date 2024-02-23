@@ -2,9 +2,10 @@ import { useSession, signIn, signOut } from 'next-auth/react';
 import {IoMdLogOut, IoMdLogIn} from 'react-icons/io';
 import styles from './Login.module.scss';
 import { Alignment, Animations, Sizes } from '../../constants/components';
-import { Button } from '../common/Button';
+import { Button } from '../common/Button/Button';
 import { Avatar } from '../common/Avatar';
 import { Popover, PopoverItem } from '../common/Popover';
+import { IconButton } from '../common/Button/IconButton';
 
 export default function Login() {
     const { data: session } = useSession();
@@ -26,8 +27,10 @@ export default function Login() {
                     <PopoverItem>
                         Profile
                     </PopoverItem>
-                    <PopoverItem onClick={() => signOut()}>
-                        <IoMdLogOut size={20} />
+                    <PopoverItem
+                        icon={IoMdLogOut}
+                        onClick={() => signOut()}
+                    >
                         Sign out
                     </PopoverItem>
                 </Popover>
@@ -36,14 +39,14 @@ export default function Login() {
     }
 
     return (
-        <Button
+        <IconButton
             animation={Animations.SWAP}
             className={styles.discord}
             size={Sizes.MEDIUM}
             onClick={() => signIn('discord')}
+            icon={IoMdLogIn}
         >
-            <IoMdLogIn size={20} />
             Sign in
-        </Button>
+        </IconButton>
     );
 }

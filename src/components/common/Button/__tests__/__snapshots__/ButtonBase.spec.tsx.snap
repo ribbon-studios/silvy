@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component(Button) should display the Button 1`] = `
+<body>
+  <div>
+    <button
+      class="buttonBase sz-small"
+      data-testid="button-base"
+      draggable="false"
+    >
+      UwU
+    </button>
+  </div>
+</body>
+`;
