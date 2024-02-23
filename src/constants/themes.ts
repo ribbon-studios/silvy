@@ -2,6 +2,8 @@ export const COLORS = {
     primary: '#f492a5',
     secondary: '#2f3640',
     tertiary: '#f7e8d8',
+    header: '#101418',
+    body: '#232830',
     darken: 'rgba(0, 0, 0, 0.25)',
     lighten: 'rgba(255, 255, 255, 0.25)'
 }

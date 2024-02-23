@@ -1,12 +1,18 @@
 
+import { BsPatchPlus, BsPatchPlusFill, BsPeopleFill, BsBookFill } from 'react-icons/bs';
 import styles from './Header.module.scss';
 import { Button } from './Button';
 import { Direction, Sizes } from '../constants/components';
 import { Content } from './Content';
 import Link from 'next/link';
 import Login from './Login';
+import { IconButton } from './IconButton';
+import { Popover, PopoverItem } from './Popover';
+import { useSession } from 'next-auth/react';
 
 export function Header() {
+    const { data: session } = useSession();
+
     return (
         <div className={styles.header}>
             <Content className={styles.content} direction={Direction.HORIZONTAL} main>
@@ -18,17 +24,27 @@ export function Header() {
                 >
                     Silvy
                 </Button>
-                {/* <Button
-                    as={Link}
-                    className={styles.strats}
-                    size={Sizes.MEDIUM}
-                    href='/strats'
-                >
-                    Strats
-                </Button> */}
                 <div style={{
                     flex: 1
                 }}></div>
+                {session && (
+                    <Popover
+                        toggle={<IconButton
+                            icon={BsPatchPlus}
+                            hoverIcon={BsPatchPlusFill}
+                            size={30}
+                        />}
+                    >
+                        <PopoverItem>
+                            <BsBookFill size={20} />
+                            Create a Strat
+                        </PopoverItem>
+                        <PopoverItem>
+                            <BsPeopleFill size={20} />
+                            Create a Team
+                        </PopoverItem>
+                    </Popover>
+                )}
                 <Login />
             </Content>
         </div>

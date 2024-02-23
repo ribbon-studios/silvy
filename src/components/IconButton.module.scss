@@ -1,0 +1,24 @@
+.iconButton {
+    position: relative;
+
+    .icon,
+    .hoverIcon {
+        transition: 0.15s ease-in-out;
+        transition-property: opacity;
+    }
+
+    .hoverIcon {
+        position: absolute;
+        opacity: 0;
+    }
+
+    &:hover {
+        .icon {
+            opacity: 0;
+        }
+
+        .hoverIcon {
+            opacity: 1;
+        }
+    }
+}

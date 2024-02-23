@@ -1,0 +1,21 @@
+.popoverItem {
+    --popover-item-color: var(--silvy-primary-color);
+
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    color: var(--popover-item-color);
+    background-color: var(--popover-background-color);
+
+    transition: 0.15s ease-in-out;
+    transition-property: background-color, color;
+
+    &:hover {
+        color: var(--popover-background-color);
+        background-color: var(--popover-item-color);
+        cursor: pointer;
+    }
+} 

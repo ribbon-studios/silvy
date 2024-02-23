@@ -20,6 +20,8 @@ export default function SilvyApp({ Component, pageProps: { session, ...pageProps
                         --silvy-primary-color: ${COLORS.primary};
                         --silvy-secondary-color: ${COLORS.secondary};
                         --silvy-tertiary-color: ${COLORS.tertiary};
+                        --silvy-header-color: ${COLORS.header};
+                        --silvy-body-color: ${COLORS.body};
                         --silvy-darken-color: ${COLORS.darken};
                         --silvy-lighten-color: ${COLORS.lighten};
                         --silvy-off-white: #fafafa;
