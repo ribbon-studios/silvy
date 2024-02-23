@@ -1,10 +1,10 @@
 import NextAuth from 'next-auth';
-import type {NextAuthOptions} from 'next-auth/core/types';
+import type {AuthOptions} from 'next-auth/core/types';
 import DiscordProvider from 'next-auth/providers/discord';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import { prisma } from '../../../utils/prisma';
 
-export const authOptions: NextAuthOptions = {
+export const authOptions: AuthOptions = {
     adapter: PrismaAdapter(prisma),
     providers: [
         // TODO: Add support for an email provider
