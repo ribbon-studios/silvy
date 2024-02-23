@@ -17,7 +17,7 @@ exports[`Component(Button) should support NextJS Links 1`] = `
   <div>
     <a
       class="button sz-small an-darken"
-      href="https://google.com"
+      href="https://silvy.rains.cafe"
     >
       children
     </a>

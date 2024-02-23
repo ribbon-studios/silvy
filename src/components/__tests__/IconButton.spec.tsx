@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { BsPatchCheck, BsPatchCheckFill } from 'react-icons/bs';
-import { createRenderComponent } from '../../../__tests__/render';
+import { createRenderComponent } from '@rain/test-utils/render';
 import { IconButton, IconButtonProps } from '../IconButton';
 
 describe('Component(Button)', () => {
@@ -17,19 +17,18 @@ describe('Component(Button)', () => {
     });
 
     it('should support overriding the tag type', () => {
-        const { baseElement } = renderButton({
+        const { baseElement } = renderButton<IconButtonProps<'a'>>({
             as: 'a'
         });
 
         expect(baseElement).toMatchSnapshot()
     });
 
-    // TODO: Figure out how to get proper type checking working with Poly Components
     it('should support NextJS Links', () => {
-        const { baseElement } = renderButton({
+        const { baseElement } = renderButton<IconButtonProps<typeof Link>>({
             as: Link,
-            href: 'https://google.com'
-        } as any);
+            href: 'https://silvy.rains.cafe'
+        });
 
         expect(baseElement).toMatchSnapshot()
     });

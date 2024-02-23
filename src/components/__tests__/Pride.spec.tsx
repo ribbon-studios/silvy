@@ -1,5 +1,5 @@
 import { Pride } from '../Pride'
-import { createRenderComponent } from '../../../__tests__/render'
+import { createRenderComponent } from '@rain/test-utils/render'
 
 describe('Component(Pride)', () => {
     const renderPride = createRenderComponent(Pride);

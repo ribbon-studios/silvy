@@ -14,3 +14,14 @@ export enum Direction {
     HORIZONTAL = 'horizontal',
     VERTICAL = 'vertical'
 }
+
+export enum Alignment {
+    LEFT = 'left',
+    CENTER = 'center',
+    RIGHT = 'right',
+}
+
+export enum Actions {
+    CLICK,
+    HOVER,
+}

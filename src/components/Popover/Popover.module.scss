@@ -6,31 +6,58 @@
     position: relative;   
     white-space: nowrap;
 
+    // Bridges the gap between the toggle and the popover
+    &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+    }
+
+    &.al-left .container {
+        left: 0;
+    }
+    
+    &.al-right .container {
+        right: 0;
+    }
+
+    &.al-center .container {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     .container {
         position: absolute;
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        min-width: 150px;
+        // min-width: 150px;
         background: var(--popover-background-color);
         border-radius: 5px;
         border: 2px solid var(--popover-item-color);
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
-        top: calc(100% - 5px);
-        left: 50%;
-        transform: translateX(-50%);
+        top: calc(100%);
         opacity: 0;
         transition: 0.15s ease-in-out;
         transition-property: top, opacity;
     }
 
-    &:not(.opened) .container {
-        pointer-events: none;
+    &:not(.opened) {
+        &:after {
+            pointer-events: none;
+        }
+
+        .container {
+            pointer-events: none;
+        }
     }
 
     &.opened .container {
-        top: 100%;
+        top: calc(100% + 5px);
         opacity: 1;
     }
 } 

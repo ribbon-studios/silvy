@@ -2,7 +2,7 @@
 import { BsPatchPlus, BsPatchPlusFill, BsPeopleFill, BsBookFill } from 'react-icons/bs';
 import styles from './Header.module.scss';
 import { Button } from './Button';
-import { Direction, Sizes } from '../constants/components';
+import { Alignment, Direction, Sizes } from '../constants/components';
 import { Content } from './Content';
 import Link from 'next/link';
 import Login from './Login';

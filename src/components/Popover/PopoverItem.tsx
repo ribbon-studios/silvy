@@ -1,15 +1,27 @@
+import { PolymorphicPropsWithoutRef } from 'react-polymorphic-types';
 import styles from './PopoverItem.module.scss';
 
-export interface PopoverItemProps {
+const DEFAULT_ELEMENT = 'button';
+
+export interface PopoverItemOwnProps {
     children: React.ReactNode;
 }
 
-export function PopoverItem({
-    children
-}: PopoverItemProps) {
+export type PopoverItemProps<
+    T extends React.ElementType = typeof DEFAULT_ELEMENT
+> = PolymorphicPropsWithoutRef<PopoverItemOwnProps, T>;
+
+export function PopoverItem<E extends React.ElementType = typeof DEFAULT_ELEMENT>({
+    as,
+    children,
+    ...extraProps
+}: PopoverItemProps<E>) {
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    const Element: React.ElementType = as || DEFAULT_ELEMENT;
+
     return (
-        <div className={styles.popoverItem}>
+        <Element className={styles.popoverItem} {...extraProps}>
             {children}
-        </div>
+        </Element>
     );
 }

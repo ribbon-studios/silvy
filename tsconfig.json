@@ -17,7 +17,12 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "paths": {
+        "@rain/test-utils/*": [
+            "./__tests__/*"
+        ]
+    }
   },
   "include": [
     "next-env.d.ts",

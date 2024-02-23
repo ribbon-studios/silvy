@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component(Popover) should display the Popover 1`] = `
+<body>
+  <div>
+    <div
+      class="popover al-center"
+      data-testid="popover"
+    >
+      <div
+        class="toggle"
+      >
+        <button>
+          Test
+        </button>
+      </div>
+      <div
+        class="container"
+      >
+        <div>
+          Item A
+        </div>
+        <div>
+          Item B
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
