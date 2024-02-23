@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Web app for building strats for XIV",
   "main": "index.js",
-  "author": "Ceci <admin@cecilias.me>",
+  "author": "Cecilia Sanare <ceci@sanare.dev>",
   "license": "GPL-3.0",
   "scripts": {
     "postinstall": "netlify link --name rain-silvy",

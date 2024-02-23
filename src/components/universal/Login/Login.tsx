@@ -14,6 +14,8 @@ import { selectUser } from '../../../features/user';
 export default function Login() {
     const user = useAppSelector(selectUser);
 
+    console.log(user);
+
     if (user) {
         return (
             <>
