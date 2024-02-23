@@ -5,7 +5,6 @@ import { Direction } from '../../constants/components';
 import { IconButton } from '../common/Button/IconButton';
 import { BsGithub } from 'react-icons/bs';
 import { Button } from '../common/Button/Button';
-import Link from 'next/link';
 
 export function Footer() {
     return (
@@ -13,12 +12,12 @@ export function Footer() {
             <div/>
             <Button
                 as='a'
-                href="https://vercel.com/?utm_source=rainbow-cafe&utm_campaign=oss"
+                href="https://www.netlify.com"
                 target="_blank"
                 rel="noopener noreferrer"
             >
                 Powered by
-                <Image src="/vercel-logo.svg" height={20} width={88} alt="Vercel" className='icon' />
+                <Image src="/netlify.svg" height={20} width={88} alt="Netlify" className='icon' />
             </Button>
             <div className={styles.externalLinks}>
                 <IconButton

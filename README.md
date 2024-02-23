@@ -60,7 +60,7 @@ services:
 
 [_**Want to Contribute?**_](/CONTRIBUTING.md)
 
-[![Vercel][vercel-image]][vercel-url]
+[![Deploys by Netlify][netlify-image]][netlify-url]
 
-[vercel-image]: https://user-images.githubusercontent.com/9692284/192920193-fc967232-e0ba-425f-af63-c8eff3fe3216.png
-[vercel-url]: https://vercel.com/?utm_source=rainbow-cafe&utm_campaign=oss
+[netlify-image]: https://www.netlify.com/v3/img/components/netlify-color-accent.svg
+[netlify-url]: https://www.netlify.com
