@@ -27,7 +27,10 @@ export function AuthorCard({
                 </Typography>
                 <Pronouns pronouns={author.pronouns}/>
             </div>
-            <Avatar src={author.image} />
+            <Avatar
+                src={author.image}
+                size={90}
+            />
         </Card>
     );
 }

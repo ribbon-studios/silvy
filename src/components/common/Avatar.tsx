@@ -3,18 +3,21 @@ import Image from 'next/image';
 
 export type AvatarProps = {
     src: string;
+    size?: number;
 }
 
 export function Avatar({
-    src
+    src,
+    size = 40
 }: AvatarProps): JSX.Element {
     return (
-        <div className={styles.avatar}>
-            <Image
-                alt='Avatar'
-                layout='fill'
-                src={src}
-            />
-        </div>
+        <Image
+            alt='Avatar'
+            width={size}
+            height={size}
+            className={styles.avatar}
+            src={src}
+            priority
+        />
     )
 }
