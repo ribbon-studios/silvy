@@ -17,7 +17,12 @@ export function Footer() {
                 rel="noopener noreferrer"
             >
                 Powered by
-                <Image src="/netlify.svg" height={20} width={88} alt="Netlify" className='icon' />
+                <Image
+                    src="/netlify.svg"
+                    height={30}
+                    width={110}
+                    alt="Netlify"
+                />
             </Button>
             <div className={styles.externalLinks}>
                 <IconButton
