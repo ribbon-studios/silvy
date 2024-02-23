@@ -2,5 +2,5 @@ export type Author = {
     uid: string;
     name: string;
     image: string;
-    pronouns: string[];
+    pronouns: number[];
 };

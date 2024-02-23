@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1;
+    min-width: 200px;
+    font-weight: 600;
+    min-height: 60px;
+}
+
+.input {
+    line-height: inherit;
+    border-radius: 5px;
+    border: 1px solid var(--silvy-secondary-color);
+    padding: 0 20px;
+    font-size: inherit;
+    font-family: inherit;
+    min-height: 40px;
+}

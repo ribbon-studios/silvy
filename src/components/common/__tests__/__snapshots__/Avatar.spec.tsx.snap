@@ -8,6 +8,7 @@ exports[`Component(Avatar) should display the Avatar 1`] = `
       class="avatar"
       data-nimg="1"
       decoding="async"
+      fetchpriority="high"
       height="40"
       src="/_next/image?url=https%3A%2F%2Fsilvy.rains.cafe&w=96&q=75"
       srcset="/_next/image?url=https%3A%2F%2Fsilvy.rains.cafe&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fsilvy.rains.cafe&w=96&q=75 2x"

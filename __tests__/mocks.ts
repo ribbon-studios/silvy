@@ -15,7 +15,7 @@ export function mockAuthor(overrides?: Partial<Author>): Author {
         uid: 'marcy',
         name: 'Marcy',
         image: 'https://avatars.githubusercontent.com/u/9692284?v=4',
-        pronouns: ['she/her', 'they/them'],
+        pronouns: [1, -1],
         ...overrides
     };
 }

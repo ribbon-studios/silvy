@@ -3,7 +3,7 @@ import { PolymorphicPropsWithoutRef } from 'react-polymorphic-types';
 import { useReadOnlyCachedState } from '../hooks/use-cached-state';
 import styles from './Typography.module.scss';
 
-type TypographyValidAsTypes = 'h1';
+type TypographyValidAsTypes = 'h1' | 'h2' | 'h3';
 
 interface TypographyOwnProps {
     as: TypographyValidAsTypes;
