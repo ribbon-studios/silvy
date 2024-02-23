@@ -1,0 +1,25 @@
+.footer {
+    height: 60px;
+
+    img {
+        margin-left: 0.5rem;
+    }
+    
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.poweredBy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.logo {
+    height: 1em;
+}
