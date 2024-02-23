@@ -15,7 +15,7 @@
     "pull": "vercel env pull .env.local -y"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.4",
+    "@emotion/react": "^11.10.5",
     "@reduxjs/toolkit": "^1.9.0",
     "mobile-detect": "^1.4.5",
     "next": "^12.3.1",
