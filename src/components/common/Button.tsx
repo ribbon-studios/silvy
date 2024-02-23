@@ -1,7 +1,7 @@
+import classnames from 'classnames';
 import type { PolymorphicPropsWithoutRef } from 'react-polymorphic-types';
 import styles from './Button.module.scss';
-import { classnames } from '../utils/classnames';
-import { Animations, Sizes } from '../constants/components';
+import { Animations, Sizes } from '../../constants/components';
 import Link from 'next/link';
 
 export const DEFAULT_ELEMENT = 'button';

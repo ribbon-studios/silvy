@@ -1,5 +1,5 @@
+import { createRenderComponent } from '@rain/test-utils/render';
 import { Avatar, AvatarProps } from '../Avatar'
-import { createRenderComponent } from '@rain/test-utils/render'
 
 describe('Component(Avatar)', () => {
     const renderAvatar = createRenderComponent<AvatarProps>(Avatar, {

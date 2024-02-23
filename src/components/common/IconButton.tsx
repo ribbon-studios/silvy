@@ -2,8 +2,8 @@ import { IconType } from 'react-icons';
 import type { PolymorphicPropsWithoutRef } from 'react-polymorphic-types';
 import {Button} from './Button';
 import styles from './IconButton.module.scss';
-import { classnames } from '../utils/classnames';
-import { Animations } from '../constants/components';
+import classnames from 'classnames';
+import { Animations } from '../../constants/components';
 
 export interface IconButtonOwnProps {
     icon: IconType;

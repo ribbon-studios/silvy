@@ -1,7 +1,7 @@
 import styles from './Layout.module.scss';
 import {Header} from './Header';
 import {Footer} from './Footer';
-import { Content } from './Content';
+import { Content } from '../common/Content';
 import { Pride } from './Pride';
 
 export default function Layout({children}) {

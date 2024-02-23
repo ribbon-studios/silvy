@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { createRenderComponent } from '@rain/test-utils/render';
-import { Animations, Sizes } from '../../constants/components';
+import { Animations, Sizes } from '../../../constants/components';
 import { Button, ButtonProps } from '../Button';
 
 describe('Component(Button)', () => {

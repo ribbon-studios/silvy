@@ -1,5 +1,5 @@
 import { SessionProvider } from 'next-auth/react';
-import Layout from '../components/Layout';
+import Layout from '../components/universal/Layout';
 import { COLORS } from '../constants/themes';
 
 export default function SilvyApp({ Component, pageProps: { session, ...pageProps } }) {

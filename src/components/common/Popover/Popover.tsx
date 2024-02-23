@@ -1,8 +1,8 @@
 import React from 'react';
 import { useRef } from 'react';
-import { Alignment, Actions } from '../../constants/components';
-import { classnames } from '../../utils/classnames';
-import { useOpened } from '../../utils/element';
+import { Alignment, Actions } from '../../../constants/components';
+import classnames from 'classnames';
+import { useOpened } from '../../../utils/element';
 import styles from './Popover.module.scss';
 
 export interface PopoverProps {
