@@ -33,6 +33,7 @@ export function useOpened(externallyOpened: boolean, event: Actions, closeOnClic
     if (event === Actions.CLICK) {
         eventProps.onClick = open;
     } else if (event === Actions.HOVER) {
+        eventProps.onClick = open;
         eventProps.onMouseEnter = open;
         eventProps.onMouseLeave = close;
     }
