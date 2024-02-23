@@ -24,4 +24,10 @@
     "[typescript]": {
         "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
     },
+    "[prisma]": {
+        "editor.defaultFormatter": "Prisma.prisma"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
 }
