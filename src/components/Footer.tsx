@@ -5,7 +5,7 @@ import { Direction } from '../constants/components';
 
 export function Footer() {
     return (
-        <Content className={styles.footer} direction={Direction.HORIZONTAL}>
+        <Content className={styles.footer} direction={Direction.HORIZONTAL} main>
             <a
                 className={styles.poweredBy}
                 href="https://vercel.com/?utm_source=rainbow-cafe&utm_campaign=oss"
