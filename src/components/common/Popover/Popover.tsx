@@ -2,8 +2,8 @@ import React from 'react';
 import { useRef } from 'react';
 import { Alignment, Actions } from '../../../constants/components';
 import classnames from 'classnames';
-import { useOpened } from '../../../utils/element';
 import styles from './Popover.module.scss';
+import { useOpened } from '../../hooks/use-opened';
 
 export interface PopoverProps {
     children: React.ReactNode;
@@ -36,6 +36,7 @@ export function Popover({
                 styles[`al-${alignment}`]
             )}
             data-testid='popover'
+            ref={ref}
             {...eventProps}
         >
             <div className={styles.toggle}>
