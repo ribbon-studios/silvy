@@ -20,7 +20,7 @@
     "deploy:database:live": "prisma db push"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
+    "@emotion/react": "^11.11.4",
     "@next-auth/prisma-adapter": "^1.0.5",
     "@prisma/client": "^4.4.0",
     "@reduxjs/toolkit": "^1.9.0",
