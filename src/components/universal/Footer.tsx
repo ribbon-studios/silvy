@@ -30,7 +30,7 @@ export function Footer() {
                 <IconButton
                     as='a'
                     icon={BsGithub}
-                    href='https://github.com/rain-cafe-xiv/silvy'
+                    href='https://github.com/ribbon-studios/silvy'
                     target="_blank"
                     rel="noopener noreferrer"
                 />

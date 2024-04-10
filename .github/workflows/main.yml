@@ -117,7 +117,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   deploy-docker:
-    name: Deploy (Docker Hub)
+    name: Deploy (Docker)
     runs-on: ubuntu-latest
     needs: semantic
     if: needs.semantic.outputs.published == 'true'
@@ -141,17 +141,17 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
-      - name: Log in to Docker Hub
-        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+      - uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-      
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: rainbowcafe/silvy
+          images: ghcr.io/ribbon-studios/silvy
           tags: |
             type=raw,value=${{ needs.semantic.outputs.major }}
             type=raw,value=${{ needs.semantic.outputs.major }}.${{ needs.semantic.outputs.minor }}
@@ -164,16 +164,6 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
-      - name: Push README to Dockerhub
-        uses: christian-korneck/update-container-description-action@v1
-        env:
-          DOCKER_USER: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASS: ${{ secrets.DOCKER_PASSWORD }}
-        with:
-          destination_container_repo: rainbowcafe/silvy
-          provider: dockerhub
-          readme_file: 'README.md'
 
   deploy-netlify:
     name: Deploy (Netlify)

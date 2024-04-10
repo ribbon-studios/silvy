@@ -1,8 +1,6 @@
 _**⚠️ This repo is still a WIP and things are always subject to change. ⚠️**_
 
-[![Docker Hub Version](https://img.shields.io/docker/v/rainbowcafe/silvy?label=Docker%20Hub%20Version)](https://hub.docker.com/repository/docker/rainbowcafe/silvy)
-
-[![Coveralls](https://img.shields.io/coveralls/github/rain-cafe-xiv/silvy)](https://coveralls.io/github/rain-cafe-xiv/silvy)
+[![Coveralls](https://img.shields.io/coveralls/github/ribbon-studios/silvy)](https://coveralls.io/github/ribbon-studios/silvy)
 
 ## Silvy
 
@@ -34,8 +32,8 @@ $ docker run -d \
       -e DISCORD_CLIENT_ID="<your-discord-client-id>" \
       -e DISCORD_SECRET="<your-discord-token>" \
       -e DATABASE_URL="<your-database-url>" \
-      --name discord-bot \
-      rainbowcafe/silvy
+      --name silvy \
+      ghcr.io/ribbon-studios/silvy:latest
 ```
 
 #### 🐋 Docker Compose
@@ -44,9 +42,9 @@ $ docker run -d \
 version: "3"
 
 services:
-  discord-bot:
-    image: rainbowcafe/silvy:latest
-    container_name: discord-bot
+  silvy:
+    image: ghcr.io/ribbon-studios/silvy:latest
+    container_name: silvy
     tty: true
     stdin_open: true
     restart: unless-stopped
